@@ -1,0 +1,153 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "site",
+            "relationshipNameCapitalized": "Site",
+            "relationshipFieldName": "site",
+            "otherEntityName": "eventsite",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Eventsite",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name",
+            "fieldInJavaBeanMethod": "Name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "5",
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "number",
+            "fieldType": "Integer",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Number",
+            "fieldNameUnderscored": "number",
+            "fieldInJavaBeanMethod": "Number",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "eventStatus",
+            "fieldType": "Eventstatus",
+            "fieldIsEnum": true,
+            "fieldValues": "initiate,plan,cancel,complete,hold",
+            "fieldNameCapitalized": "EventStatus",
+            "fieldNameUnderscored": "event_status",
+            "fieldInJavaBeanMethod": "EventStatus",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "judgepanelStatus",
+            "fieldType": "Allowted,pending,hold",
+            "fieldIsEnum": true,
+            "fieldValues": "allowted,pending,hold",
+            "fieldNameCapitalized": "JudgepanelStatus",
+            "fieldNameUnderscored": "judgepanel_status",
+            "fieldInJavaBeanMethod": "JudgepanelStatus",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "changed",
+            "fieldType": "LocalDate",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Changed",
+            "fieldNameUnderscored": "changed",
+            "fieldInJavaBeanMethod": "Changed",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "startDate",
+            "fieldType": "LocalDate",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "StartDate",
+            "fieldNameUnderscored": "start_date",
+            "fieldInJavaBeanMethod": "StartDate",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "endDate",
+            "fieldType": "LocalDate",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "EndDate",
+            "fieldNameUnderscored": "end_date",
+            "fieldInJavaBeanMethod": "EndDate",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "entryCount",
+            "fieldType": "Integer",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "EntryCount",
+            "fieldNameUnderscored": "entry_count",
+            "fieldInJavaBeanMethod": "EntryCount",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "entryLimit",
+            "fieldType": "Integer",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "EntryLimit",
+            "fieldNameUnderscored": "entry_limit",
+            "fieldInJavaBeanMethod": "EntryLimit",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "entryLimitType",
+            "fieldType": "Entrylimittype",
+            "fieldIsEnum": true,
+            "fieldValues": "fixed_numeric_limits,no_plan",
+            "fieldNameCapitalized": "EntryLimitType",
+            "fieldNameUnderscored": "entry_limit_type",
+            "fieldInJavaBeanMethod": "EntryLimitType",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150918232510",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "validation": true
+}

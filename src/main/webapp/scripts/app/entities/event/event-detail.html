@@ -1,0 +1,111 @@
+
+<div>
+    <h2><span translate="akceventApp.event.detail.title">Event</span> {{event.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.number">Number</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.number}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.eventStatus">EventStatus</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.eventStatus}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.judgepanelStatus">JudgepanelStatus</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.judgepanelStatus}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.changed">Changed</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.changed}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.startDate">StartDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.startDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.endDate">EndDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.endDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.entryCount">EntryCount</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.entryCount}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.entryLimit">EntryLimit</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.entryLimit}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.entryLimitType">EntryLimitType</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.entryLimitType}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="akceventApp.event.site">site</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{event.siteId}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="event"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

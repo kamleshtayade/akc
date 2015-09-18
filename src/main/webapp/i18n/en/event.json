@@ -1,0 +1,28 @@
+{
+    "akceventApp": {
+        "event" : {
+            "home": {
+                "title": "Events",
+                "createLabel": "Create a new Event",
+                "createOrEditLabel": "Create or edit a Event"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Event {{ id }}?"
+            },
+            "detail": {
+                "title": "Event"
+            },
+            "name": "Name",
+            "number": "Number",
+            "eventStatus": "EventStatus",
+            "judgepanelStatus": "JudgepanelStatus",
+            "changed": "Changed",
+            "startDate": "StartDate",
+            "endDate": "EndDate",
+            "entryCount": "EntryCount",
+            "entryLimit": "EntryLimit",
+            "entryLimitType": "EntryLimitType",
+            "site": "site"
+        }
+    }
+}

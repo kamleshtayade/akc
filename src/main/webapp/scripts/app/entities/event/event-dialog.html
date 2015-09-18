@@ -1,0 +1,149 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myEventLabel" translate="akceventApp.event.home.createOrEditLabel">Create or edit a Event</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label translate="global.field.id">ID</label>
+            <input type="text" class="form-control" name="id"
+                    ng-model="event.id" readonly>
+        </div>
+
+        <div class="form-group">
+            <label translate="akceventApp.event.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="event.name" required ng-minlength="5" ng-maxlength="20">
+
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.minlength" translate="entity.validation.minlength" translate-value-min="5">
+                    This field is required to be at least 5 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="akceventApp.event.number" for="field_number">Number</label>
+            <input type="number" class="form-control" name="number" id="field_number"
+                    ng-model="event.number" required>
+
+            <div ng-show="editForm.number.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.number.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.number.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="akceventApp.event.eventStatus" for="field_eventStatus">EventStatus</label>
+            <select class="form-control" name="eventStatus" ng-model="event.eventStatus" id="field_eventStatus" required>
+               <option value="initiate">initiate</option>
+               <option value="plan">plan</option>
+               <option value="cancel">cancel</option>
+               <option value="complete">complete</option>
+               <option value="hold">hold</option>
+            </select>
+
+            <div ng-show="editForm.eventStatus.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.eventStatus.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="akceventApp.event.judgepanelStatus" for="field_judgepanelStatus">JudgepanelStatus</label>
+            <select class="form-control" name="judgepanelStatus" ng-model="event.judgepanelStatus" id="field_judgepanelStatus" required>
+               <option value="allowted">allowted</option>
+               <option value="pending">pending</option>
+               <option value="hold">hold</option>
+            </select>
+
+            <div ng-show="editForm.judgepanelStatus.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.judgepanelStatus.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="akceventApp.event.changed" for="field_changed">Changed</label>
+            <input type="date" class="form-control" name="changed" id="field_changed"
+                    ng-model="event.changed">
+
+        </div>
+        <div class="form-group">
+            <label translate="akceventApp.event.startDate" for="field_startDate">StartDate</label>
+            <input type="date" class="form-control" name="startDate" id="field_startDate"
+                    ng-model="event.startDate" required>
+
+            <div ng-show="editForm.startDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.startDate.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="akceventApp.event.endDate" for="field_endDate">EndDate</label>
+            <input type="date" class="form-control" name="endDate" id="field_endDate"
+                    ng-model="event.endDate" required>
+
+            <div ng-show="editForm.endDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.endDate.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="akceventApp.event.entryCount" for="field_entryCount">EntryCount</label>
+            <input type="number" class="form-control" name="entryCount" id="field_entryCount"
+                    ng-model="event.entryCount">
+
+        </div>
+        <div class="form-group">
+            <label translate="akceventApp.event.entryLimit" for="field_entryLimit">EntryLimit</label>
+            <input type="number" class="form-control" name="entryLimit" id="field_entryLimit"
+                    ng-model="event.entryLimit">
+
+        </div>
+        <div class="form-group">
+            <label translate="akceventApp.event.entryLimitType" for="field_entryLimitType">EntryLimitType</label>
+            <select class="form-control" name="entryLimitType" ng-model="event.entryLimitType" id="field_entryLimitType">
+               <option value="fixed_numeric_limits">fixed_numeric_limits</option>
+               <option value="no_plan">no_plan</option>
+            </select>
+
+        </div>
+
+        <div class="form-group">
+            <label translate="akceventApp.event.site" for="field_site">site</label>
+            <select class="form-control" id="field_site" name="site" ng-model="event.site.id" ng-options="eventsite.id as eventsite.id for eventsite in eventsites">
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

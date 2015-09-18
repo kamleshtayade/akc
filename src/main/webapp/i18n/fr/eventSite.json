@@ -1,0 +1,21 @@
+{
+    "akceventApp": {
+        "eventSite" : {
+            "home": {
+                "title": "EventSites",
+                "createLabel": "Créer un nouveau EventSite",
+                "createOrEditLabel": "Créer ou éditer un EventSite"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le EventSite {{ id }} ?"
+            },
+            "detail": {
+                "title": "EventSite"
+            },
+            "name": "Name",
+            "number": "Number",
+            "changed": "Changed"
+        }
+    }
+}
+

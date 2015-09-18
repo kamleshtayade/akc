@@ -1,0 +1,20 @@
+{
+    "akceventApp": {
+        "eventSite" : {
+            "home": {
+                "title": "EventSites",
+                "createLabel": "Create a new EventSite",
+                "createOrEditLabel": "Create or edit a EventSite"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete EventSite {{ id }}?"
+            },
+            "detail": {
+                "title": "EventSite"
+            },
+            "name": "Name",
+            "number": "Number",
+            "changed": "Changed"
+        }
+    }
+}

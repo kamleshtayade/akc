@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "baseName": "akcevent",
+    "packageName": "com.spring.app",
+    "packageFolder": "com/spring/app",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "enableTranslation": true,
+    "rememberMeKey": "ec9a9207649ffaa4c6d6ae539b1820ed98368705"
+  }
+}
